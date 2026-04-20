@@ -1,4 +1,4 @@
-const WHATSAPP_NUMBER = "16065078887";
+const WHATSAPP_NUMBER = "19543170622";
 
 export const whatsappMessages = {
   headerBanner:

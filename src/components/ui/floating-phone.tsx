@@ -28,7 +28,7 @@ export const FloatingPhone = () => {
         className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-4 py-3 text-sm font-bold text-white shadow-xl transition hover:-translate-y-0.5 hover:bg-emerald-700"
       >
         <MessageCircle className="h-4 w-4" />
-        WhatsApp Puppy Advisor
+        Chat with a Puppy
       </a>
     </div>
   );
