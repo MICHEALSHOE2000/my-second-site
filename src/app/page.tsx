@@ -9,7 +9,7 @@ import ExpertQuote from '@/components/sections/expert-quote';
 import LocationsMap from '@/components/sections/locations-map';
 import Footer from '@/components/sections/footer';
 import { FloatingPhone } from '@/components/ui/floating-phone';
-import { createWhatsAppUrl, whatsappMessages } from '@/lib/whatsapp';
+import { createTextMessageUrl, textMessages } from '@/lib/whatsapp';
 
 export default function HomePage() {
   return (
@@ -23,7 +23,7 @@ export default function HomePage() {
           <div className="mb-6 rounded-2xl border border-amber-200 bg-amber-50 px-5 py-4 text-center text-sm font-medium text-amber-900 shadow-sm">
             <span className="font-bold">High-demand breeds sell out fast:</span>{' '}
             <a
-              href={createWhatsAppUrl(whatsappMessages.heroPrimary)}
+              href={createTextMessageUrl(textMessages.heroPrimary)}
               target="_blank"
               rel="noopener noreferrer"
               className="underline underline-offset-2"
@@ -41,7 +41,7 @@ export default function HomePage() {
               <h2 className="text-2xl font-extrabold text-slate-900">Available Puppies</h2>
             </div>
             <a
-              href={createWhatsAppUrl(whatsappMessages.floatingBreedRequest)}
+              href={createTextMessageUrl(textMessages.floatingBreedRequest)}
               target="_blank"
               rel="noopener noreferrer"
               className="hidden rounded-lg bg-emerald-600 px-4 py-2 text-sm font-semibold text-white hover:bg-emerald-700 md:inline-block"
@@ -61,7 +61,7 @@ export default function HomePage() {
         <section id="how-it-works" className="bg-emerald-900 py-12 text-white">
           <div className="container mx-auto grid gap-6 px-4 md:grid-cols-3">
             {[
-              ['1', 'Tell us what you want', 'Share breed, size, budget, and timing via WhatsApp.'],
+              ['1', 'Tell us what you want', 'Share breed, size, budget, and timing by text message.'],
               ['2', 'Get handpicked options', 'We send matching puppies with transparent details and support.'],
               ['3', 'Reserve and receive safely', 'Choose confidently and get secure nationwide delivery.'],
             ].map(([step, title, text]) => (

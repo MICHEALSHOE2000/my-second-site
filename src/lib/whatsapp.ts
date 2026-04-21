@@ -1,6 +1,6 @@
-const WHATSAPP_NUMBER = "16065078887";
+const TEXT_MESSAGE_NUMBER = "19543170622";
 
-export const whatsappMessages = {
+export const textMessages = {
   headerBanner:
     "Hi! I saw your website banner and I’d like help choosing the right puppy.",
   headerPrimary:
@@ -15,6 +15,6 @@ export const whatsappMessages = {
     "Hi! I want to tell you exactly the type of dog I want:",
 } as const;
 
-export const createWhatsAppUrl = (message: string) => {
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+export const createTextMessageUrl = (message: string) => {
+  return `sms:+${TEXT_MESSAGE_NUMBER}?body=${encodeURIComponent(message)}`;
 };
