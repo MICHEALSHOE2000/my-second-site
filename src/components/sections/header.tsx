@@ -27,7 +27,7 @@ export default function Header() {
           rel="noopener noreferrer"
           className="hover:underline"
         >
-          🐶 Text our trusted agent now: +1 (954) 317-0622
+          🐶 Speak with a Puppy Advisor now on WhatsApp: +1 (954) 317-0622
         </a>
       </div>
 
