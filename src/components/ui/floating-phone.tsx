@@ -1,11 +1,11 @@
 "use client";
 
 import { Dog, MessageCircle } from "lucide-react";
-import { createWhatsAppUrl, whatsappMessages } from "@/lib/whatsapp";
+import { createTextMessageUrl, textMessages } from "@/lib/whatsapp";
 
 export const FloatingPhone = () => {
-  const whatsappUrl = createWhatsAppUrl(whatsappMessages.floatingGeneral);
-  const breedRequestUrl = createWhatsAppUrl(whatsappMessages.floatingBreedRequest);
+  const textMessageUrl = createTextMessageUrl(textMessages.floatingGeneral);
+  const breedRequestUrl = createTextMessageUrl(textMessages.floatingBreedRequest);
 
   return (
     <div className="fixed bottom-4 right-4 z-50 flex max-w-[280px] flex-col items-end gap-2">
@@ -21,10 +21,10 @@ export const FloatingPhone = () => {
       </a>
 
       <a
-        href={whatsappUrl}
+        href={textMessageUrl}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Chat on WhatsApp"
+        aria-label="Send us a text message"
         className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-4 py-3 text-sm font-bold text-white shadow-xl transition hover:-translate-y-0.5 hover:bg-emerald-700"
       >
         <MessageCircle className="h-4 w-4" />

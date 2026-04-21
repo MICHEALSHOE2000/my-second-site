@@ -1,7 +1,7 @@
 import type { FC, SVGProps } from 'react';
 import { MessageCircle, Instagram, Youtube, ShieldCheck } from 'lucide-react';
 import Image from 'next/image';
-import { createWhatsAppUrl, whatsappMessages } from '@/lib/whatsapp';
+import { createTextMessageUrl, textMessages } from '@/lib/whatsapp';
 
 const AnchorLink = ({ href, children, className }: { href: string; children: React.ReactNode; className?: string }) => (
   <a href={href} className={className}>
@@ -96,7 +96,7 @@ const PuppySpotLogo = () => (
 );
 
 const Footer = () => {
-    const whatsappUrl = createWhatsAppUrl(whatsappMessages.footerSupport);
+    const textMessageUrl = createTextMessageUrl(textMessages.footerSupport);
 
     return (
         <footer className="bg-white">
@@ -116,11 +116,11 @@ const Footer = () => {
                         <div className="flex flex-col sm:flex-row gap-10 lg:gap-20">
                             <div>
                                 <h3 className="font-bold text-sm text-foreground mb-2">Need guidance?</h3>
-                                <AnchorLink href={whatsappUrl} className="flex items-center gap-2 text-lg text-foreground font-semibold hover:text-primary">
+                                <AnchorLink href={textMessageUrl} className="flex items-center gap-2 text-lg text-foreground font-semibold hover:text-primary">
                                     <MessageCircle className="h-5 w-5"/>
-                                    Chat on WhatsApp
+                                    Send a text message
                                 </AnchorLink>
-                                <p className="text-xs text-muted-foreground mt-1">+1 (606) 507-8887 • Everyday 5AM-9PM PST</p>
+                                <p className="text-xs text-muted-foreground mt-1">+1 (954) 317-0622 • Everyday 5AM-9PM PST</p>
                             </div>
                             <div>
                                 <h3 className="font-bold text-sm text-foreground mb-2">Follow us</h3>

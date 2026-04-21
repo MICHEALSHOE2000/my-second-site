@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { Menu, MessageCircle, X } from "lucide-react";
-import { createWhatsAppUrl, whatsappMessages } from "@/lib/whatsapp";
+import { createTextMessageUrl, textMessages } from "@/lib/whatsapp";
 
 const navItems = [
   { label: "Available puppies", href: "#available-puppies" },
@@ -15,14 +15,14 @@ const navItems = [
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const primaryWhatsappUrl = createWhatsAppUrl(whatsappMessages.headerPrimary);
-  const bannerWhatsappUrl = createWhatsAppUrl(whatsappMessages.headerBanner);
+  const primaryTextMessageUrl = createTextMessageUrl(textMessages.headerPrimary);
+  const bannerTextMessageUrl = createTextMessageUrl(textMessages.headerBanner);
 
   return (
     <header className="sticky top-0 z-40 border-b border-emerald-100 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80">
       <div className="bg-gradient-to-r from-emerald-600 to-green-600 px-4 py-2 text-center text-sm font-medium text-white">
         <a
-          href={bannerWhatsappUrl}
+          href={bannerTextMessageUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="hover:underline"
@@ -58,13 +58,13 @@ export default function Header() {
         </nav>
 
         <a
-          href={primaryWhatsappUrl}
+          href={primaryTextMessageUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="hidden items-center gap-2 rounded-lg bg-emerald-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-700 lg:inline-flex"
         >
           <MessageCircle size={16} />
-          Chat on WhatsApp
+          Send a text message
         </a>
 
         <button
@@ -93,13 +93,13 @@ export default function Header() {
           </nav>
 
           <a
-            href={primaryWhatsappUrl}
+            href={primaryTextMessageUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-emerald-600 px-4 py-2.5 text-sm font-semibold text-white"
           >
             <MessageCircle size={16} />
-            Chat on WhatsApp
+            Send a text message
           </a>
         </div>
       )}

@@ -7,7 +7,7 @@ import Script from "next/script";
 export const metadata: Metadata = {
   title: "Find Healthy Puppies from Trusted Breeders | PuppySpot",
   description:
-    "Browse available puppies, chat with our team on WhatsApp, and get safe nationwide delivery backed by a 10-year health commitment.",
+    "Browse available puppies, text with our trusted agent, and get safe nationwide delivery backed by a 10-year health commitment.",
 };
 
 export default function RootLayout({
