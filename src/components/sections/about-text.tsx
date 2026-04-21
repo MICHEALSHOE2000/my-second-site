@@ -12,8 +12,8 @@ const pillars = [
     text: "From checkout to arrival, your puppy journey is supported with clear updates and support.",
   },
   {
-    title: "Real support on WhatsApp",
-    text: "Skip forms and waiting. Chat directly with a puppy advisor and get answers in minutes.",
+    title: "Real support by text",
+    text: "Skip forms and waiting. Text directly with a trusted agent and get answers in minutes.",
   },
 ];
 

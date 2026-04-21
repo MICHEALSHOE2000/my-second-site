@@ -1,5 +1,5 @@
 import { CheckCircle2, MessageCircle, ShieldCheck, Star, Truck } from "lucide-react";
-import { createWhatsAppUrl, whatsappMessages } from "@/lib/whatsapp";
+import { createTextMessageUrl, textMessages } from "@/lib/whatsapp";
 
 const stats = [
   { label: "Happy families", value: "220k+" },
@@ -8,7 +8,7 @@ const stats = [
 ];
 
 const HeroSection = () => {
-  const whatsappUrl = createWhatsAppUrl(whatsappMessages.heroPrimary);
+  const textMessageUrl = createTextMessageUrl(textMessages.heroPrimary);
 
   return (
     <section className="bg-gradient-to-b from-emerald-50 via-white to-white pb-14 pt-12">
@@ -26,19 +26,19 @@ const HeroSection = () => {
 
             <p className="mt-4 max-w-2xl text-lg text-slate-600">
               Browse verified puppies, compare options by lifestyle, and get
-              personal guidance on WhatsApp from first question to safe home
+              personal guidance over text message from first question to safe home
               delivery.
             </p>
 
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <a
-                href={whatsappUrl}
+                href={textMessageUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-600 px-6 py-3.5 font-semibold text-white shadow transition hover:bg-emerald-700"
               >
                 <MessageCircle className="h-4 w-4" />
-                Get matched on WhatsApp
+                Get matched by text
               </a>
 
               <a
@@ -94,7 +94,7 @@ const HeroSection = () => {
             </div>
 
             <a
-              href={whatsappUrl}
+              href={textMessageUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white hover:bg-slate-800"
