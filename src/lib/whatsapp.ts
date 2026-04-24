@@ -1,4 +1,8 @@
-const WHATSAPP_NUMBER = "19543170622";
+const configuredPhone = process.env.NEXT_PUBLIC_PHONE?.trim();
+
+export const publicPhone = configuredPhone || "";
+
+const smsPhone = publicPhone.replace(/\D/g, "");
 
 export const textMessages = {
   headerBanner:
@@ -16,5 +20,5 @@ export const textMessages = {
 } as const;
 
 export const createTextMessageUrl = (message: string) => {
-  return `sms:+${TEXT_MESSAGE_NUMBER}?body=${encodeURIComponent(message)}`;
+  return `sms:${smsPhone ? `+${smsPhone}` : ""}?body=${encodeURIComponent(message)}`;
 };

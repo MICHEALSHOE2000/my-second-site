@@ -1,7 +1,7 @@
 import type { FC, SVGProps } from 'react';
 import { MessageCircle, Instagram, Youtube, ShieldCheck } from 'lucide-react';
 import Image from 'next/image';
-import { createTextMessageUrl, textMessages } from '@/lib/whatsapp';
+import { createTextMessageUrl, publicPhone, textMessages } from '@/lib/whatsapp';
 
 const AnchorLink = ({ href, children, className }: { href: string; children: React.ReactNode; className?: string }) => (
   <a href={href} className={className}>
@@ -120,7 +120,7 @@ const Footer = () => {
                                     <MessageCircle className="h-5 w-5"/>
                                     Send a text message
                                 </AnchorLink>
-                                <p className="text-xs text-muted-foreground mt-1">+1 (954) 317-0622 • Everyday 5AM-9PM PST</p>
+                                <p className="text-xs text-muted-foreground mt-1">{publicPhone || 'Set NEXT_PUBLIC_PHONE'} • Everyday 5AM-9PM PST</p>
                             </div>
                             <div>
                                 <h3 className="font-bold text-sm text-foreground mb-2">Follow us</h3>
